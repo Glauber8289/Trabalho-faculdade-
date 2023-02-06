@@ -8,27 +8,33 @@ public class program {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
 		
-	    int n=50;
-		int[] Num = new int[n];
+		System.out.println("Quantas notas serão digitadas ?");
+		int qtd = sc.nextInt();
 		
-		int media;
-		int soma;
+		int [] Notas = new int[qtd];
+		double soma=0;
+		double media=0;
 		
-		for(int i =1;i<n;i++) {
-		System.out.println("Digite um numero na posição "+i);
-		int nu = sc.nextInt();   
-		System.out.println("Digite s para saber a soma se quiser saber a media digite m");
-		char s=sc.next().charAt(0);
-		soma=nu+i;
-		media=soma/i;
+	
+		for(int i = 0;i<Notas.length;i++) {
+		System.out.println("Digite a " + (i+1)+ "ª nota :");
+		Notas[i]  = sc.nextInt();   
+		
+		
+		//System.out.println("Digite s para saber a soma se quiser saber a media digite m");
+		//char s=sc.next().charAt(0);
+		soma+=Notas[i];
+		
+		media=soma/qtd;
+		
 		//System.out.println("Digite s para saber a soma se quiser saber a media digite m");
         //String s = sc.nextLine();
-		if(s=='s') {
-		System.out.println("A soma na posicão  "+i+"é "+soma);
+		//if(s=='s') {
+		
+		// else if (s=='m') {
+		System.out.println("A soma das notas digitadas é "+soma);
 		}
-		 else if (s=='m') {
-		System.out.println("A media das notas digitadas é "+media);
+		System.out.println("A media e "+media);
 	     }
+	//}
 	}
-	}
-}
